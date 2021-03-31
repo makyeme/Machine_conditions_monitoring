@@ -45,9 +45,9 @@ This project was created with:
 ### ii Feature exploration and visualization 
 
 Using the Librosa library, diverse features of the audio files were extracted and thus visualized.
-Visuals were crucial to generating deeper insights into delineations between normal and anomalous machine sounds. Graphics of extracted features can be accessed at [Visuals](https://github.com/makyeme/Machine_conditions_monitoring/tree/DevelopmentMartin/Visuals). 
+Visuals were crucial to generating deeper insights into delineations between normal and anomalous machine sounds. Graphics of extracted features can be accessed at: [Visuals](https://github.com/makyeme/Machine_conditions_monitoring/tree/DevelopmentMartin/Visuals). 
 
-The code for audio visualization can be accessed here [Code](https://github.com/makyeme/Machine_conditions_monitoring/blob/Development/simon_the_explorer.ipynb).
+The code for audio visualization can be accessed here: [Code](https://github.com/makyeme/Machine_conditions_monitoring/blob/Development/simon_the_explorer.ipynb).
 Below is an example depicting a graphical visualization of normal Vs abnormal sounds for a pump under diverse conditions of background noise:
 
 
@@ -60,20 +60,20 @@ Libraries used: Librosa, Matplotlib, Seaborn
 ### iii Feature Extraction and Generation
 
 The lead up to model building necessitated extraction and generation of features.
-The code used for extraction can be accessed at [“Link”]
+The code used for extraction can be accessed at: [Code](https://github.com/makyeme/Machine_conditions_monitoring/blob/Development/simon_the_explorer.ipynb) 
 Sample features are briefly elaborated below:
 
 #### The Short-Term Fourier Transform(STFT)
 
-A very crucial aspect of time series signal processing. The STFT was used to  cut the audio waveform into short, overlapping equal length segments and take the Fourier transform of each segment individually to produce multiple power spectrograms, identifying resonant frequencies present in our audio file. 
+- A very crucial aspect of time series signal processing. The STFT was used to  cut the audio waveform into short, overlapping equal length segments and take the Fourier transform of each segment individually to produce multiple power spectrograms, identifying resonant frequencies present in our audio file. 
 
 #### Mel-Frequency Cepstral Coefficients(MFCCs)
 
-In brief, MFCC is a mathematical method which transforms the power spectrum of an audio signal to a small number of coefficients representing power of the audio signal in a frequency region (a region of pitch) taken relative to time., MFC coefficients give us an idea of the changing pitch of an audio signal.
+- In brief, MFCC is a mathematical method which transforms the power spectrum of an audio signal to a small number of coefficients representing power of the audio signal in a frequency region (a region of pitch) taken relative to time., MFC coefficients give us an idea of the changing pitch of an audio signal.
 
 #### The Chromagram 
 
-A chromagram is a representation of an audio signal w.r.t. time, mapping audio signal to a pitch class. Most often, we map to the 12 standard pitch classes (i.e. the musical scale CDEFGAB + 5 semitones gives us 12 pitch classes).
+- A chromagram is a representation of an audio signal w.r.t. time, mapping audio signal to a pitch class. Most often, we map to the 12 standard pitch classes (i.e. the musical scale CDEFGAB + 5 semitones gives us 12 pitch classes).
 
 Graphics of a Chromagram STFT for the normal Vs abnormal sound of the pump are presented below:
 
@@ -83,7 +83,7 @@ Graphics of a Chromagram STFT for the normal Vs abnormal sound of the pump are p
 
 ####  mel spectrogram 
 
-This is a spectrogram where the frequencies are converted to the mel scale.
+- This is a spectrogram where the frequencies are converted to the mel scale.
 
 #### The Root Mean Square Energy
 
@@ -94,7 +94,7 @@ This is a spectrogram where the frequencies are converted to the mel scale.
 
 #### Zero-Crossing Rate
 
-The Zero-Crossing Rate (ZCR) of an audio frame is the rate of sign-changes of the signal during the frame. In other words, it is the number of times the signal changes value, from positive to negative and vice versa, divided by the length of the frame
+- The Zero-Crossing Rate (ZCR) of an audio frame is the rate of sign-changes of the signal during the frame. In other words, it is the number of times the signal changes value, from positive to negative and vice versa, divided by the length of the frame
 Libraries used: Librosa
 
 
