@@ -45,7 +45,13 @@ This project was created with:
 ### Feature exploration and visualization 
 
 Using the Librosa library, diverse features of the audio files were extracted and thus visualized.
-Visuals were crucial to generating deeper insights into delineations between normal and anomalous machine sounds. Visuals of extracted features can be accessed at [Visuals](https://github.com/makyeme/Machine_conditions_monitoring/tree/DevelopmentMartin/Visuals). The code for audio visualization can be accessed here [Code](https://github.com/makyeme/Machine_conditions_monitoring/tree/DevelopmentMartin/Visuals)
+Visuals were crucial to generating deeper insights into delineations between normal and anomalous machine sounds. Graphics of extracted features can be accessed at [Visuals](https://github.com/makyeme/Machine_conditions_monitoring/tree/DevelopmentMartin/Visuals). 
+The code for audio visualization can be accessed here [Code](https://github.com/makyeme/Machine_conditions_monitoring/blob/Development/simon_the_explorer.ipynb)
+Below is an example depicting a graphical visualization of normal Vs abnormal sounds for a pump under diverse conditions of background noise:
+
+
+![Optional Text](https://github.com/makyeme/NYC_motorCrashes/blob/main/Missing_data.PNG)
+
 
 Libraries used: Librosa, Matplotlib, Seaborn
 
