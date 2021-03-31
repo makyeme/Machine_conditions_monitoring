@@ -72,7 +72,13 @@ In brief, MFCC is a mathematical method which transforms the power spectrum of a
 
 #### The Chromagram 
 
-A chromagram is a representation of an audio signal w.r.t. time, mapping audio signal to a pitch class. Most often, we map to the 12 standard pitch classes (i.e. the musical scale CDEFGAB + 5 semitones gives us 12 pitch classes)
+A chromagram is a representation of an audio signal w.r.t. time, mapping audio signal to a pitch class. Most often, we map to the 12 standard pitch classes (i.e. the musical scale CDEFGAB + 5 semitones gives us 12 pitch classes).
+
+Graphics of a Chromagram STFT for the normal Vs abnormal sound of the pump are presented below:
+
+![Optional Text](https://github.com/makyeme/Machine_conditions_monitoring/blob/DevelopmentMartin/Visuals/Audio_features/chroma_STFT_pump.PNG)
+
+
 
 ####  mel spectrogram 
 
