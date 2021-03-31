@@ -60,7 +60,7 @@ Libraries used: Librosa, Matplotlib, Seaborn
 ### iii Feature Extraction and Generation
 
 The lead up to model building necessitated extraction and generation of features.
-The code used for extraction can be accessed at: [Code_Feature_Extraction](https://github.com/makyeme/Machine_conditions_monitoring/blob/Development/feature_extraction.ipynb) 
+The code used for extraction can be accessed at: [Code_Feature_Extraction](https://github.com/makyeme/Machine_conditions_monitoring/blob/Development/feature_extraction.ipynb).
 Sample features are briefly elaborated below:
 
 #### The Short-Term Fourier Transform(STFT)
