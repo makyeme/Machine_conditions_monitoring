@@ -46,8 +46,9 @@ This project was created with:
 
 Using the Librosa library, diverse features of the audio files were extracted and thus visualized.
 Visuals were crucial to generating deeper insights into delineations between normal and anomalous machine sounds. Graphics of extracted features can be accessed at [Visuals](https://github.com/makyeme/Machine_conditions_monitoring/tree/DevelopmentMartin/Visuals). 
-The code for audio visualization can be accessed here [Code](https://github.com/makyeme/Machine_conditions_monitoring/blob/Development/simon_the_explorer.ipynb)
+The code for audio visualization can be accessed here [Code](https://github.com/makyeme/Machine_conditions_monitoring/blob/Development/simon_the_explorer.ipynb).
 Below is an example depicting a graphical visualization of normal Vs abnormal sounds for a pump under diverse conditions of background noise:
+
 
 
 ![Optional Text](https://github.com/makyeme/Machine_conditions_monitoring/blob/DevelopmentMartin/Visuals/Raw_AudioWaves/AudioWave_pump.PNG)
