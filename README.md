@@ -50,7 +50,7 @@ The code for audio visualization can be accessed here [Code](https://github.com/
 Below is an example depicting a graphical visualization of normal Vs abnormal sounds for a pump under diverse conditions of background noise:
 
 
-![Optional Text](https://github.com/makyeme/NYC_motorCrashes/blob/main/Missing_data.PNG)
+![Optional Text](https://github.com/makyeme/Machine_conditions_monitoring/blob/DevelopmentMartin/Visuals/Raw_AudioWaves/AudioWave_pump.PNG)
 
 
 Libraries used: Librosa, Matplotlib, Seaborn
