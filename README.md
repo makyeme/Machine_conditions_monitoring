@@ -124,6 +124,9 @@ Based on performance metrices,  the two most suitable models for audio processin
 Performance of select models was plotted on the ROC curve and is presented below: 
 
 
+![Optional Text](https://github.com/makyeme/Machine_conditions_monitoring/blob/DevelopmentMartin/Visuals/ROC_curve/rocfinal.png)
+
+
 Libraries: Scikit-learn
 
 
