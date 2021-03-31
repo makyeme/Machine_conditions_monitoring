@@ -45,7 +45,7 @@ This project was created with:
 ### Feature exploration and visualization 
 
 Using the Librosa library, diverse features of the audio files were extracted and thus visualized.
-Visuals were crucial to generating deeper insights into delineations between normal and anomalous machine sounds. Visuals of extracted features can be accessed at [‘link to folder containing visuals’]. The code for audio visualization can be accessed here [“link”]
+Visuals were crucial to generating deeper insights into delineations between normal and anomalous machine sounds. Visuals of extracted features can be accessed at [Visuals](https://github.com/makyeme/NYC_motorCrashes/blob/main/NYC_crashes.ipynb). The code for audio visualization can be accessed here [“link”]
 
 Libraries used: Librosa, Matplotlib, Seaborn
 
