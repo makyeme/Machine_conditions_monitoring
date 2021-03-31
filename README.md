@@ -62,39 +62,39 @@ The lead up to model building necessitated extraction and generation of features
 The code used for extraction can be accessed at [“Link”]
 Sample features are briefly elaborated below:
 
-    #### The Short-Term Fourier Transform(STFT)
+#### The Short-Term Fourier Transform(STFT)
 
-    A very crucial aspect of time series signal processing. The STFT was used to  cut the audio waveform into short, overlapping equal length segments and take the Fourier transform of each segment individually to produce multiple power spectrograms, identifying resonant frequencies present in our audio file. 
+A very crucial aspect of time series signal processing. The STFT was used to  cut the audio waveform into short, overlapping equal length segments and take the Fourier transform of each segment individually to produce multiple power spectrograms, identifying resonant frequencies present in our audio file. 
 
-    #### Mel-Frequency Cepstral Coefficients(MFCCs)
+#### Mel-Frequency Cepstral Coefficients(MFCCs)
 
-    In brief, MFCC is a mathematical method which transforms the power spectrum of an audio signal to a small number of coefficients representing power of the audio signal in a frequency region (a region of pitch) taken relative to time., MFC coefficients give us an idea of the changing pitch of an audio signal.
+In brief, MFCC is a mathematical method which transforms the power spectrum of an audio signal to a small number of coefficients representing power of the audio signal in a frequency region (a region of pitch) taken relative to time., MFC coefficients give us an idea of the changing pitch of an audio signal.
 
-    #### The Chromagram 
+#### The Chromagram 
 
-    A chromagram is a representation of an audio signal w.r.t. time, mapping audio signal to a pitch class. Most often, we map to the 12 standard pitch classes (i.e. the musical scale CDEFGAB + 5 semitones gives us 12 pitch classes).
+A chromagram is a representation of an audio signal w.r.t. time, mapping audio signal to a pitch class. Most often, we map to the 12 standard pitch classes (i.e. the musical scale CDEFGAB + 5 semitones gives us 12 pitch classes).
 
-    Graphics of a Chromagram STFT for the normal Vs abnormal sound of the pump are presented below:
+Graphics of a Chromagram STFT for the normal Vs abnormal sound of the pump are presented below:
 
-    ![Optional Text](https://github.com/makyeme/Machine_conditions_monitoring/blob/DevelopmentMartin/Visuals/Audio_features/chroma_STFT_pump.PNG)
-
-
-
-    ####  mel spectrogram 
-
-    This is a spectrogram where the frequencies are converted to the mel scale.
-
-    #### The Root Mean Square Energy
-
-    The square root of the mean of the square. RMS is a meaningful way of calculating the average of values over a period of time. With audio, the signal value (amplitude) is squared, averaged over a period of time, then the square root of the result is calculated. The result is a value, that when squared, is related (proportional) to the effective power of the signal. A plot of the RMSE for the pump is presented below:
-
-    ![Optional Text](https://github.com/makyeme/Machine_conditions_monitoring/blob/DevelopmentMartin/Visuals/Audio_features/RMSE_pump.PNG)
+![Optional Text](https://github.com/makyeme/Machine_conditions_monitoring/blob/DevelopmentMartin/Visuals/Audio_features/chroma_STFT_pump.PNG)
 
 
-    #### Zero-Crossing Rate
 
-    The Zero-Crossing Rate (ZCR) of an audio frame is the rate of sign-changes of the signal during the frame. In other words, it is the number of times the signal changes value, from positive to negative and vice versa, divided by the length of the frame
-    Libraries used: Librosa
+####  mel spectrogram 
+
+This is a spectrogram where the frequencies are converted to the mel scale.
+
+#### The Root Mean Square Energy
+
+The square root of the mean of the square. RMS is a meaningful way of calculating the average of values over a period of time. With audio, the signal value (amplitude) is squared, averaged over a period of time, then the square root of the result is calculated. The result is a value, that when squared, is related (proportional) to the effective power of the signal. A plot of the RMSE for the pump is presented below:
+
+![Optional Text](https://github.com/makyeme/Machine_conditions_monitoring/blob/DevelopmentMartin/Visuals/Audio_features/RMSE_pump.PNG)
+
+
+#### Zero-Crossing Rate
+
+The Zero-Crossing Rate (ZCR) of an audio frame is the rate of sign-changes of the signal during the frame. In other words, it is the number of times the signal changes value, from positive to negative and vice versa, divided by the length of the frame
+Libraries used: Librosa
 
 
 ### iv Data Preprocessing
