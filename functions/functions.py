@@ -1,7 +1,12 @@
 import numpy as np
+import pandas as pd
 from scipy.stats import kurtosis
 from scipy.stats import skew
 from scipy.stats import entropy
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+
+import glob
 
 
 def abs_fft(wave: np.array):
@@ -48,3 +53,44 @@ def simple_stats(x: np.array, key: str, extra_info: dict) -> dict:
         for number, percent in zip(np.percentile(x, extra_info['percentiles']), extra_info['percentiles']):
             data[f'{key}_percentile_{percent}'] = number
     return data
+
+def read_data(dirname='data_features/*.csv', scaling=True, split_by_id=True):
+    csv_paths = glob.glob(dirname)
+    df_list = []
+
+    for path in csv_paths:
+        df_list.append(pd.read_csv(path, index_col=0))
+    df = pd.concat(df_list)
+    df.dropna(inplace=True)
+    if scaling:
+        cols_scaling = df.drop('path', axis=1).columns
+        scaler = StandardScaler()
+        df[cols_scaling] = scaler.fit_transform(df[cols_scaling])
+    df.loc[:, 'machine'] = df['path'].apply(lambda string: string.split('/')[2])
+    df.loc[:, 'abnormal'] = df['path'].apply(lambda string: 1 if 'abnormal' in string else 0)
+    df.loc[:, 'id'] = df['path'].apply(lambda string: string.split('/')[3][3:])
+    dummies = pd.get_dummies(df['machine'], prefix='Machine', drop_first=True)
+    df = df.join(dummies)
+    df.drop('machine', axis=1, inplace=True)
+
+
+    X = df.drop(['path', 'abnormal'], axis=1)
+    y = df['abnormal']
+    x_train, x_val, y_train, y_val = train_test_split(X, y, test_size=0.1,  random_state=42)
+
+    mask_id_6 = x_train['id'] == '06'
+    x_train = x_train[~mask_id_6]
+    y_train = y_train[~mask_id_6]
+
+    if split_by_id:
+
+
+        mask_id_4 = x_train['id'] == '04'
+        x_test = x_train[mask_id_4]
+        x_train = x_train[~mask_id_4]
+
+        y_test = y_train[mask_id_4]
+        y_train = y_train[~mask_id_4]
+    else:
+        x_train, x_test, y_train, y_test = train_test_split(x_train, y_train, test_size=0.3,  random_state=42)
+    return x_train, x_test, x_val, y_train, y_test, y_val
