@@ -158,8 +158,6 @@ A set of optimal hyperparametrs was generated and further evaluated. Grid Search
 
 - RandomForest was found to be the most robust classifier
 
-### Limitations:
-
 
 ### Future directions/recommendations:
 
