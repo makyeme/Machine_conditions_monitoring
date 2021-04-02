@@ -77,7 +77,7 @@ Sample features are briefly elaborated below:
 
    Graphics of a Chromagram STFT for the normal Vs abnormal sound of the pump are presented below:
 
-![Optional Text](https://github.com/makyeme/Machine_conditions_monitoring/blob/DevelopmentMartin/Visuals/Audio_features/chroma_STFT_pump.PNG)
+![Optional Text](https://github.com/makyeme/Machine_conditions_monitoring/blob/main/Visuals/Audio_features/chroma_STFT_pump.PNG)
 
 
 
