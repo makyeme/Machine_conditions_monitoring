@@ -89,7 +89,7 @@ Sample features are briefly elaborated below:
 
 - The square root of the mean of the square. RMS is a meaningful way of calculating the average of values over a period of time. With audio, the signal value (amplitude) is squared, averaged over a period of time, then the square root of the result is calculated. The result is a value, that when squared, is related (proportional) to the effective power of the signal. A plot of the RMSE for the pump is presented below:
 
-![Optional Text](https://github.com/makyeme/Machine_conditions_monitoring/blob/DevelopmentMartin/Visuals/Audio_features/RMSE_pump.PNG)
+![Optional Text](https://github.com/makyeme/Machine_conditions_monitoring/blob/main/Visuals/Audio_features/RMSE_pump.PNG)
 
 
 #### Zero-Crossing Rate
