@@ -52,7 +52,7 @@ Below is an example depicting a graphical visualization of normal Vs abnormal so
 
 
 
-![Optional Text](https://github.com/makyeme/Machine_conditions_monitoring/blob/DevelopmentMartin/Visuals/Raw_AudioWaves/AudioWave_pump.PNG)
+![Optional Text](https://github.com/makyeme/Machine_conditions_monitoring/blob/main/Visuals/Raw_AudioWaves/AudioWave_pump.PNG)
 
 
 Libraries used: Librosa, Matplotlib, Seaborn
