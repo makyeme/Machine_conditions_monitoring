@@ -29,7 +29,6 @@ class Features:
     """
 
     def __init__(self, feature_functions=None, sr=16000):
-        print('lolo')
         self.sampling_rate = sr
         if isinstance(feature_functions, type(None)):
             self.feature_functions = {
@@ -94,5 +93,3 @@ class Features:
                 os.makedirs('data_features')
             df.to_csv(f'data_features/features_{machine}.csv')
         return df
-
-    

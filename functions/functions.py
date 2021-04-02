@@ -54,7 +54,7 @@ def simple_stats(x: np.array, key: str, extra_info: dict) -> dict:
             data[f'{key}_percentile_{percent}'] = number
     return data
 
-def read_data(dirname='data_features/*.csv', scaling=True, split_by_id=True):
+def read_data(dirname='data_features/*.csv', scaling=True, cv=True, ID=False):
     csv_paths = glob.glob(dirname)
     df_list = []
 
@@ -69,28 +69,20 @@ def read_data(dirname='data_features/*.csv', scaling=True, split_by_id=True):
     df.loc[:, 'machine'] = df['path'].apply(lambda string: string.split('/')[2])
     df.loc[:, 'abnormal'] = df['path'].apply(lambda string: 1 if 'abnormal' in string else 0)
     df.loc[:, 'id'] = df['path'].apply(lambda string: string.split('/')[3][3:])
-    dummies = pd.get_dummies(df['machine'], prefix='Machine', drop_first=True)
-    df = df.join(dummies)
-    df.drop('machine', axis=1, inplace=True)
+    dummies1 = pd.get_dummies(df['machine'], prefix='Machine')
+    dummies2 = pd.get_dummies(df['id'], prefix='id')
+    df = pd.concat([df, dummies1, dummies2], axis=1)
+    if not id:
+
+        df.drop(['machine', 'id'], axis=1, inplace=True)
 
 
     X = df.drop(['path', 'abnormal'], axis=1)
-    y = df['abnormal']
-    x_train, x_val, y_train, y_val = train_test_split(X, y, test_size=0.1,  random_state=42)
-
-    mask_id_6 = x_train['id'] == '06'
-    x_train = x_train[~mask_id_6]
-    y_train = y_train[~mask_id_6]
-
-    if split_by_id:
-
-
-        mask_id_4 = x_train['id'] == '04'
-        x_test = x_train[mask_id_4]
-        x_train = x_train[~mask_id_4]
-
-        y_test = y_train[mask_id_4]
-        y_train = y_train[~mask_id_4]
-    else:
-        x_train, x_test, y_train, y_test = train_test_split(x_train, y_train, test_size=0.3,  random_state=42)
+    y = df['abnormal'].values
+    x_train_test, x_val, y_train_test, y_val = train_test_split(X, y, test_size=0.1,  random_state=42)
+    if cv:
+        return x_train_test, x_val, y_train_test, y_val
+    x_train, x_test, y_train, y_test = train_test_split(x_train_test, y_train_test, test_size=0.15,  random_state=42)
     return x_train, x_test, x_val, y_train, y_test, y_val
+
+read_data(dirname='data_features/*.csv', scaling=True)
