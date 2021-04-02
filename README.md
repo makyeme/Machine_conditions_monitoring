@@ -156,10 +156,7 @@ A set of optimal hyperparametrs was generated and further evaluated. Grid Search
 
 ## 4. Conclusion
 
-(closing remarks on developed model, Lessons learnt, takeaways, etc…?????)
-- RandomForest was found to be the most robust classifier, with an accuracy of?? 
-- The recall of the model could be improved 
-
+- RandomForest was found to be the most robust classifier
 
 ### Limitations:
 
