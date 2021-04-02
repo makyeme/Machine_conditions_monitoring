@@ -149,6 +149,8 @@ Feature importance was calculated, thus, basing on the results, highly weighted 
 
 
 #### Hyperparameter tunning
+Hyper parameter optimization  was done via the RandomizedSearchCV, implementation was automatically executed by the Random Hyperparameter Grid.
+A set of optimal hyperparametrs was generated and further evaluated. Grid Search with Cross Validation was used to find and evaluate the final best model.
 
 
 
@@ -162,6 +164,6 @@ Feature importance was calculated, thus, basing on the results, highly weighted 
 ### Limitations:
 
 
-### Future directions/recommendations/Potential improvements:
+### Future directions/recommendations:
 
 - Make report on validity of pings(warnings) by model as feedback to improve model
